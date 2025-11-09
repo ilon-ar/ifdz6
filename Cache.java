@@ -18,22 +18,22 @@ public class Cache<T> {
         items.addLast(item);
     }
 
-    public boolean remove(T item) {
+    public boolean remove(T item) {     //Удаление элемента из очереди
         return items.remove(item);
     }
 
-    public boolean exist(T item) {
+    public boolean exist(T item) {      //Проверка, существует ли элемент
         return items.contains(item);
     }
 
-    public T getFirst() {
+    public T getFirst() {       //Получение первого элемента очереди
         return items.getFirst();
     }
 
-    public T getLast() {
+    public T getLast() {        //Получение последнего элемента очереди
         return items.getLast();
     }
-    public T getItemByIndex(int id) {
+    public T getItemByIndex(int id) {       //Получение id-того элемента очереди (фу больше 1 строки)
         int currentIndex = 0;
         for (T t : items) {
             if (currentIndex == id) {
@@ -44,15 +44,9 @@ public class Cache<T> {
         return null;
     }
 
-
-
     @Override
-    public String toString() {
+    public String toString() {      //Переопределение метода toString() для вывода элементов очереди
         return items.toString();
     }
-
-
-    
-
 
 }
